@@ -32,7 +32,7 @@ A beautiful, modern shopping list card for [Bring!](https://www.getbring.com/) -
 ### HACS (Recommended)
 
 1. Open HACS in Home Assistant
-2. Go to **Frontend** → **+ Explore & Download Repositories**
+2. Go to **Integrations** → **+ Explore & Download Repositories**
 3. Search for "Bring! Shopping Card"
 4. Click **Download**
 5. Restart Home Assistant
@@ -42,18 +42,17 @@ A beautiful, modern shopping list card for [Bring!](https://www.getbring.com/) -
 
 ### HACS (Custom Repository)
 
-If you don’t see it in **Explore & Download**, add it as a custom repository:
+If you don't see it in **Explore & Download**, add it as a custom repository:
 
 1. HACS → **Integrations** → **⋮** → **Custom repositories**
 2. Add `https://github.com/costantinoai/bring-widget-hacs` with category **Integration**
-3. Add it again with category **Plugin**
-4. Download, then restart Home Assistant
+3. Download and restart Home Assistant
 
 ### Manual Installation
 
 1. Download the [latest release](https://github.com/costantinoai/bring-widget-hacs/releases)
-2. Copy `bring-shopping-card.js` to `/config/www/`
-3. Copy `custom_components/bring_shopping/` to `/config/custom_components/`
+2. Copy `custom_components/bring_shopping/` to `/config/custom_components/`
+3. Copy `bring-shopping-card.js` to `/config/www/`
 4. Add the resource in **Settings** → **Dashboards** → **Resources**:
    ```yaml
    url: /local/bring-shopping-card.js
