@@ -2,3 +2,4 @@ node_modules/
 .DS_Store
 *.log
 .env
+HOW_TO_UPDATE_HACS_COMPONENT.md
